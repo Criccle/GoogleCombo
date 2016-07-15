@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="GoogleCombo.widget.GoogleCombo" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>GoogleCombo</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+        <property key="jsonDataSource" type="attribute" required="false">
+            <caption>JSON code</caption>
+            <category>Data</category>
+            <description>The data source of the combo chart</description>
+            <attributeTypes>
+                <attributeType name="String"/>
+            </attributeTypes>
+        </property>
+        <property key="title" type="string" required="false">
+            <caption>Chart title</caption>
+            <category>Appearance</category>
+            <description>The chart title</description>
+        </property>
+        <property key="yAxis" type="string" required="false">
+            <caption>Y axis title</caption>
+            <category>Axis</category>
+            <description>The Y axis title</description>
+        </property>
+        <property key="xAxis" type="string" required="false">
+            <caption>X axis title</caption>
+            <category>Axis</category>
+            <description>The X axis title</description>
+        </property>
+        <property key="interpolateNulls" type="boolean" defaultValue="false">
+            <caption>Interpolate Nulls</caption>
+            <category>Data</category>
+            <description>Whether to guess the value of missing points</description>
+        </property>
+        <property key="backgroundColor" type="string" required="true" defaultValue="white">
+            <caption>Background color</caption>
+            <category>Appearance</category>
+            <description>The background color for the main area of the chart</description>
+        </property>
+        <property key="seriesType" type="enumeration" defaultValue="line" required="true">
+            <caption>Type of regular chart</caption>
+            <category>Data</category>
+            <description>The type of chart</description>
+            <enumerationValues>
+                <enumerationValue key="line">Line</enumerationValue>
+                <enumerationValue key="bars">Bars</enumerationValue>
+                <enumerationValue key="area">Area</enumerationValue>
+                <enumerationValue key="candlesticks">Candlesticks</enumerationValue>
+                <enumerationValue key="steppedArea">Stepped area</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="backgroundColorStroke" type="string" required="true" defaultValue="#666">
+            <caption>Border color</caption>
+            <category>Appearance</category>
+            <description>The color of the chart border</description>
+        </property>
+        <property key="backgroundColorStrokeWidth" type="string" required="true" defaultValue="0">
+            <caption>Border color width</caption>
+            <category>Appearance</category>
+            <description>The width of the chart border</description>
+        </property>       
+        <property key="curveType" type="enumeration" required="true" defaultValue="none">
+            <caption>Curve type</caption>
+            <category>Lines and Points</category>
+            <description>Controls the curve of the lines when the line width is not zero</description>
+            <enumerationValues>
+                <enumerationValue key="none">None</enumerationValue>
+                <enumerationValue key="function">Function</enumerationValue>
+            </enumerationValues>
+        </property>    
+        <property key="fontSize" type="string" required="false">
+            <caption>Font size</caption>
+            <category>Appearance</category>
+            <description>The default font size, in pixels, of all text in the chart</description>
+        </property>    
+        <property key="fontName" type="string" required="false">
+            <caption>Font name</caption>
+            <category>Appearance</category>
+            <description>The default font face for all text in the chart</description>
+        </property>   
+        <property key="isStacked" type="boolean" defaultValue="false">
+            <caption>Is stacked</caption>
+            <category>Appearance</category>
+            <description>If set to true, series elements of the same type are stacked. Affects bar, column and area series only</description>
+        </property>
+        <property key="lineWidth" type="integer" required="true" defaultValue="2">
+            <caption>Line width</caption>
+            <category>Lines and Points</category>
+            <description>Data line width in pixels. Use zero to hide all lines and show only the points</description>
+        </property>
+        <property key="pointShape" type="string" required="true" defaultValue="circle">
+            <caption>Point shape</caption>
+            <category>Lines and Points</category>
+            <description>The shape of individual data elements: 'circle', 'triangle', 'square', 'diamond', 'star', or 'polygon'</description>
+        </property>
+        <property key="comboColumnType" type="enumeration" defaultValue="line" required="true">
+            <caption>Type of combo chart</caption>
+            <category>Data</category>
+            <description>The type of combo chart that is shown</description>
+            <enumerationValues>
+                <enumerationValue key="line">Line</enumerationValue>
+                <enumerationValue key="bars">Bars</enumerationValue>
+                <enumerationValue key="area">Area</enumerationValue>
+                <enumerationValue key="candlesticks">Candlesticks</enumerationValue>
+                <enumerationValue key="steppedArea">Stepped area</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="legendPosition" type="string" defaultValue="right">
+            <caption>Legend Position</caption>
+            <category>Appearance</category>
+            <description>Position of the legend. Can be 'bottom', 'left', 'in', 'none', 'right' or 'top'</description>
+        </property>
+        <property key="pointSize" type="integer" defaultValue="0" required="true">
+            <caption>Point size</caption>
+            <category>Lines and Points</category>
+            <description>Diameter of displayed points in pixels. Use zero to hide all points</description>
+        </property>
+    </properties>
+</widget>
